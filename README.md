@@ -58,7 +58,7 @@ Si queremos modificar el puerto donde se lanza, tendremos que modificar el fiche
 
 Para que nos funcione con la instalación del manual del composer tendremos que cambiar el puerto donde se ejecuta el explorer porque composer también se ejecuta en el puerto 8080 y, aparte, también tendremos que modificar el fichero "config.json" de la carpeta "blockchain-explorer/app/platform/fabric".
 
-En este mismo repositorio se ha subido el config.json, así que solo tendremos que clonarlo y sustituirlo por el que viene por defecto en el explorer
+En este mismo repositorio se ha subido el config.json, así que solo tendremos que clonarlo y sustituirlo por el que viene por defecto en el explorer. Hay que tener en cuenta que hay que cambiar la ruta a donde hayamos descargado nosotros el proyecto de hyperledger explorer y tambien modificar el puerto del explorer para que salga por el 8888
 
 
 
