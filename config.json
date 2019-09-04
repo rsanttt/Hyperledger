@@ -1,0 +1,50 @@
+{
+    "network-config": {
+        "org1": {
+            "name": "Org1",
+            "mspid": "Org1MSP",
+            "peer1": {
+                "requests": "grpc://localhost:7051",
+                "events": "grpc://localhost:7053",
+                "server-hostname": "peer0.org1.example.com"
+            },
+            "admin": {
+                "key": "/home/raul/fabric-dev-servers/fabric-scripts/hlfv12/composer/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore",
+                "cert": "/home/raul/fabric-dev-servers/fabric-scripts/hlfv12/composer/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts"
+            }
+        }
+    },
+    "host": "localhost",
+    "port": "8888",
+    "channel": "composerchannel",
+"orderers": [
+{
+"mspid": "OrdererMSP",
+"server-hostname": "orderer.example.com",
+"requests": "grpc://127.0.0.1:7050",
+"tls_cacerts": "/home/raul/fabric-dev-servers/fabric-scripts/hlfv12/composer/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/ca.crt"
+}
+],	
+    "users":[
+        {
+           "username":"admin",
+           "secret":"adminpw"
+        }
+     ],
+    "pg": {
+        "host": "127.0.0.1",
+        "port": "5432",
+        "database": "fabricexplorer",
+        "username": "hppoc",
+        "passwd": "password"
+    },
+    "keyValueStore": "/tmp/fabric-client-kvs",
+    "configtxgenToolPath": "/home/raul/fabric-dev-servers/fabric-samples/bin",
+    "SYNC_START_DATE_FORMAT":"YYYY/MM/DD",
+    "syncStartDate":"2019/01/01",
+    "eventWaitTime": "30000",
+    "license": "Apache-2.0"
+}
+
+
+
