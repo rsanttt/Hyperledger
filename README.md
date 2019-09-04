@@ -18,4 +18,31 @@ y nos movemos a la version v0.3.5 con el siguiente comando
 ahora procederemos a configurar la base de datos
 
 `cd blockchain-explorer/app/persistence/fabric/postgreSQL`
+
 `sudo chmod -R 775 db`
+
+`cd db/`
+
+`sudo -u postgres ./createdb.sh`
+
+nos pedirá nuestras credenciales y aceptamos
+una vez hecho, iniciamos la base de datos y abrimos otra terminal sin cerrar esta
+para iniciar la base de datos, desde la misma ruta utilizaremos el siguiente comando
+
+`sudo -u postgres psql`
+
+Ahora, ya en nueva terminal, procederemos a la instalación
+
+- `cd blockchain-explorer`
+- `npm install`
+- `cd blockchain-explorer/app/test`
+- `npm install`
+- `npm run test`
+- `cd ..`
+- `cd ..`
+- `cd client/`
+- `npm install`
+- `npm test -- -u --coverage`
+- `npm run build`
+
+
